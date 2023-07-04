@@ -1,0 +1,38 @@
+[2023-06-23T04:12:42.425+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.local_to_gcs_task scheduled__2023-06-22T00:00:00+00:00 [queued]>
+[2023-06-23T04:12:42.432+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.local_to_gcs_task scheduled__2023-06-22T00:00:00+00:00 [queued]>
+[2023-06-23T04:12:42.432+0000] {taskinstance.py:1308} INFO - Starting attempt 2 of 2
+[2023-06-23T04:12:42.444+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): local_to_gcs_task> on 2023-06-22 00:00:00+00:00
+[2023-06-23T04:12:42.450+0000] {standard_task_runner.py:57} INFO - Started process 200915 to run task
+[2023-06-23T04:12:42.453+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'local_to_gcs_task', 'scheduled__2023-06-22T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_dag.py', '--cfg-path', '/tmp/tmpxhby9ges']
+[2023-06-23T04:12:42.453+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask local_to_gcs_task
+[2023-06-23T04:12:42.495+0000] {task_command.py:410} INFO - Running <TaskInstance: data_ingestion_gcs_dag.local_to_gcs_task scheduled__2023-06-22T00:00:00+00:00 [running]> on host 36d9127cbed2
+[2023-06-23T04:12:42.569+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_ingestion_gcs_dag' AIRFLOW_CTX_TASK_ID='local_to_gcs_task' AIRFLOW_CTX_EXECUTION_DATE='2023-06-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-06-22T00:00:00+00:00'
+[2023-06-23T04:12:45.573+0000] {_metadata.py:146} WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+[2023-06-23T04:12:45.621+0000] {_metadata.py:146} WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: [Errno 113] No route to host
+[2023-06-23T04:12:48.628+0000] {_metadata.py:146} WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+[2023-06-23T04:12:48.629+0000] {_default.py:341} WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+[2023-06-23T04:12:48.630+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/data_ingestion_dag.py", line 66, in upload_to_gcs
+    client = storage.Client()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/client.py", line 177, in __init__
+    _http=_http,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/client/__init__.py", line 320, in __init__
+    _ClientProjectMixin.__init__(self, project=project, credentials=credentials)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/client/__init__.py", line 268, in __init__
+    project = self._determine_default(project)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/client/__init__.py", line 287, in _determine_default
+    return _determine_default_project(project)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_helpers/__init__.py", line 152, in _determine_default_project
+    _, project = google.auth.default()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/_default.py", line 692, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+[2023-06-23T04:12:48.664+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=data_ingestion_gcs_dag, task_id=local_to_gcs_task, execution_date=20230622T000000, start_date=20230623T041242, end_date=20230623T041248
+[2023-06-23T04:12:48.715+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 5 for task local_to_gcs_task (Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.; 200915)
+[2023-06-23T04:12:48.738+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-23T04:12:48.772+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check
