@@ -10,14 +10,16 @@ select
 pickup_zone as revenue_zone,
 date_trunc( pickup_datetime, month ) as revenue_month,
 service_type, 
+
+-- Revenue Calculation
 sum(fare_amount) as revenue_monthly_fare,
 sum(extra) as revenue_monthly_extra,
 sum(mta_tax) as revenue_monthly_mta_tax,
 sum(tolls_amount) as revenue_monthly_tolls_amount,
 sum(ehail_fee) as revenue_monthly_ehail_fee,
-sum(improvement_surchage) as revenue_monthly_surcharge,
+sum(improvement_surcharge) as revenue_monthly_surcharge,
 sum(total_amount) as revenue_monthly_total_amount,
-sum()congestion_surcharge) as revenue_monthly_congestion_surcharge,
+sum(congestion_surcharge) as revenue_monthly_congestion_surcharge,
 
 
 
