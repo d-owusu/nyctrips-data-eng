@@ -1,4 +1,3 @@
-
 version: 2
 
 sources:
@@ -6,10 +5,9 @@ sources:
     database: data-eng-389711
     schema: trips_dataset
 
-    tables: 
+    tables:
       - name: yellow_tripdata
       - name: green_tripdata
-
 models:
     - name: stg_green_tripdata
       description: >
