@@ -22,6 +22,7 @@ snapshot-paths: ["snapshots"]
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
+  - "dbt_modules"
 
 
 # Configuring models
@@ -33,8 +34,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   taxi_rides_ny:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    staging:
       +materialized: view
+    core:
+      materialized: table
 
 vars:
   payment_type_values: [1,2,3,4,5,6]
