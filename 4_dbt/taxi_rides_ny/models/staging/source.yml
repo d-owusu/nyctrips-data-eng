@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: staging
     database: data-eng-389711
-    schema: trips_dataset
+    schema: staging
 
     tables:
       - name: yellow_tripdata
