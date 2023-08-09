@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: staging
-    database: data-eng-389711
+    database: de-projects-395204
     schema: trips_dataset
 
     tables:
