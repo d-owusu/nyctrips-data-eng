@@ -22,3 +22,7 @@ Data Visualisation  - [Tableau]()
 ## Architecture
 
 ![](https://github.com/d-owusu/Nyctrips-Data-Eng/blob/main/images/Architecture.png)
+
+## Tableau Dashboard
+
+![](https://github.com/d-owusu/Nyctrips-Data-Eng/blob/main/images/tableau%20dashboard.png)
