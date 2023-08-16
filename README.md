@@ -1,16 +1,15 @@
-In this project, I do an e2e data engineering on the nyctrips data. 
 
 ## Description
-This project 
+This projeIn this project, I do an e2e data engineering on the Nyctrips data. 
 
 
 
 ## Dataset
 
-Nyc trips data is a publically available dataset of the NYC Taxi andLimousine Commission. The data is made up of GReen and Yellow taxi trips in the Newyork area and contains data 2009 till date.  I use data from January 2019 till July 2021 which contains over 130 million rows. [Biqquery](https://website-name.com)
+Nyc trips data is a publically available dataset of the NYC Taxi andLimousine Commission. The data is made up of GReen and Yellow taxi trips in the Newyork area and contains data 2009 till date.  I use data from January 2019 till July 2021 which contains over 130 million rows. [Biqquery](https://github.com/d-owusu/Nyctrips-Data-Eng/blob/main/images/bq.png)
 
 
 ## Tech Stack
-Cloud - [Google Cloud Platform](https://cloud.google.com/?hl=en)
+Cloud - [Google Cloud Platform](https://cloud.google.com/?hl=en) /
 Iac - [Terraform](https://www.terraform.io/)
 Orchestration - [Prefect](https://www.prefect.io/)
