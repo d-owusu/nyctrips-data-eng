@@ -12,7 +12,7 @@ Nyc trips data is a publically available dataset of the NYC Taxi andLimousine Co
 ## Tech Stack
 Cloud - [Google Cloud Platform](https://cloud.google.com/?hl=en) \
 Iac - [Terraform](https://www.terraform.io/) \
-Orchestration - [Prefect](https://www.prefect.io/), [Mage Ai]](https://www.mage.ai/) \
+Orchestration - [Prefect](https://www.prefect.io/), [Mage Ai](https://www.mage.ai/) \
 Transformation - [dbt](https://www.getdbt.com/)  \
 Data Lake - [Google Cloud Storage]()  \
 Data Warehouse - [Bigquery]()  \
