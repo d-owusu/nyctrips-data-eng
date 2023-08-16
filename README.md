@@ -1,15 +1,16 @@
-Welcome to your new dbt project!
+In this project, I do an e2e data engineering on the nyctrips data. 
 
-### Using the starter project
-
-Try running the following commands:
-- dbt run
-- dbt test
+## Description
+This project 
 
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](http://community.getbdt.com/) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+
+## Dataset
+
+Nyc trips data is a publically available dataset of the NYC Taxi andLimousine Commission. The data is made up of GReen and Yellow taxi trips in the Newyork area and contains data 2009 till date.  I use data from January 2019 till July 2021 which contains over 130 million rows. [Biqquery](https://website-name.com)
+
+
+## Tech Stack
+Cloud - [Google Cloud Platform](https://cloud.google.com/?hl=en)
+Iac - [Terraform](https://www.terraform.io/)
+Orchestration - [Prefect](https://www.prefect.io/)

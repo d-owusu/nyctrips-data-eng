@@ -38,3 +38,4 @@ target/
 dbt_packages/
 logs/
 # end dbt Cloud content
+data/
