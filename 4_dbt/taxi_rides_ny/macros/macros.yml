@@ -10,3 +10,12 @@ macros:
         description: > 
           payment_type value.
           Must be one of the accepted values, otherwise the macro will return null
+  - name: get_ratecode_id_description
+    description: >
+        This macro receives a rate code and returns the corresponding description.
+    arguments:
+      - name: ratecode_id
+        type: int
+        description: >
+          ratecode_id value.
+          Must be one of the accepted values, otherwise the macro will return null

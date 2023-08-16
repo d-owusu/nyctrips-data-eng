@@ -27,6 +27,7 @@ select
     trips_unioned.vendorid,
     trips_unioned.service_type,
     trips_unioned.ratecodeid,
+    trips_unioned.ratecode_id_description,
     trips_unioned.pickup_locationid,
     pickup_zone.borough as pickup_borough,
     pickup_zone.zone as pickup_zone,
