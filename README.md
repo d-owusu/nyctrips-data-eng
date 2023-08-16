@@ -17,3 +17,8 @@ Transformation - [dbt](https://www.getdbt.com/)  \
 Data Lake - [Google Cloud Storage]()  \
 Data Warehouse - [Bigquery]()  \
 Data Visualisation  - [Tableau]()
+
+
+## Architecture
+
+![](https://github.com/d-owusu/Nyctrips-Data-Eng/blob/main/images/Architecture.png)
