@@ -1,6 +1,6 @@
 
 ## Description
-This projeIn this project, I do an e2e data engineering on the Nyctrips data. 
+In this project, I do an e2e data engineering on the Nyctrips data. 
 
 
 
